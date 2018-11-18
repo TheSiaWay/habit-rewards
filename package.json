@@ -1,0 +1,23 @@
+{
+  "name": "habitRewards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.12",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
