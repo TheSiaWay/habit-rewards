@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const morgan = require('morgan');
 const errorHandler = require('errorhandler');
 
-
 // configure mongoose's promise
 mongoose.promise = global.promise;
 
@@ -39,6 +38,11 @@ if (!isProduction) {
 // configure mongoose
 mongoose.connect('mongodb://localhost/habits-local', { useNewUrlParser: true }); // TODO: replace this connection
 mongoose.set('debug', true); // TODO: might need to set to false depending on environment?
+
+// Models & routes
+require('./models/users');
+require('./config/passport');
+app.use(require('./routes'));
 
 // Error handlers & middleware
 if (!isProduction) {
